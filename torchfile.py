@@ -111,6 +111,12 @@ class TorchObject(object):
     def torch_typename(self):
         return self._typename
 
+    def keys(self):
+        return self._obj.keys()
+
+    def items(self):
+        return self._obj.items()
+
     def __repr__(self):
         return "TorchObject(%s, %s)" % (self._typename, repr(self._obj))
 
